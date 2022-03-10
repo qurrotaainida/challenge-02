@@ -1,12 +1,15 @@
 const checkEmail = (email) => {
-    
-    /* 
+
+      /* 
         Deklarasi 
         jika email === undefined {
             tampilkan "ERROR : Email is empty"
         }
         jika email !== "string" {
             tampilkan "Invalid data type"
+        }
+        jika !email.includes("@") {
+            tampilkan "ERROR : Bukan email";
         }
 
         Deklarasi regex 
@@ -25,6 +28,9 @@ const checkEmail = (email) => {
     }
     if (typeof email !== "string") {
         return "Invalid data type";
+    }
+    if (!email.includes("@")) {
+      return "ERROR : Bukan email";
     }
 
     const regex =
